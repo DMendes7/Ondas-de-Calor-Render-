@@ -1,16 +1,12 @@
 {
-  "name": "lab-jsonserver",
+  "name": "ondas-de-calor",
   "version": "1.0.0",
-  "description": "Laboratório de aplicação Web com backend baseado no JSON Server",
-  "main": "index.js",
   "scripts": {
-   "start": "node index.js"
+    "start": "concurrently \"json-server --watch codigo/db/db.json --port 3001\" \"serve -s codigo\""
   },
-  "keywords": [],
-  "author": "Rommel Vieira Carneiro",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.0",
+    "concurrently": "^7.0.0",
+    "serve": "^14.0.1"
   }
 }
